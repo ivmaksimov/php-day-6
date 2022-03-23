@@ -30,7 +30,7 @@ if ($_POST) {
 
     
         //checks if the supplier is undefined and insert null in the DB
-        $sql = "INSERT INTO cars (model, price,  seats, color, make, status, picture) VALUES ('$model', '$price', '$seats', '$color', '$make', '$status',  '$picture->fileName' )";
+        $sql = "INSERT INTO cars (model, price,  seats, color, make, status, picture) VALUES ('$model', $price, $seats, '$color', '$make', '$status',  '$picture->fileName' )";
     
     
 

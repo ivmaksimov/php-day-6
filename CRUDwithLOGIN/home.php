@@ -25,13 +25,13 @@ if(mysqli_num_rows($result)  > 0) {
             
             
             <td>" .$rows['model']."</td>
-            <td>" .$rows['price']."</td>
+            <td>" .$rows['status']."</td>
             <td><img class='img-thumbnail' src='./pictures/" . $rows['picture'] . "'</td>
             
             
             
-            <td><a href='details.php?id=" .$rows['id']."'><button class='btn btn-primary btn-sm' type='button'>More Info</button></a>
-            <a href='purchase.php?id=" .$rows['id']."'><button class='btn btn-success btn-sm' type='button'>Buy</button></a></td>
+            <td><a href='moreinfo.php?id=" .$rows['id']."'><button class='btn btn-primary btn-sm' type='button'>More Info</button></a>
+            <a href='purchase.php?id=" .$rows['id']."'><button class='btn btn-success btn-sm' type='button'>Reserve</button></a></td>
             </tr>";
     };
 } else {
@@ -82,7 +82,7 @@ mysqli_close($connect);
                     <tr >
                         
                         <th>Model</th>
-                        <th>Price</th>
+                        <th>Status</th>
                         <th>Picture</th>
                         
                     </tr>

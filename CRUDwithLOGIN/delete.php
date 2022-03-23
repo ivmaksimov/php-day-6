@@ -19,10 +19,10 @@ if ($_GET['id']) {
     $result = mysqli_query($connect, $sql);
     $data = mysqli_fetch_assoc($result);
     if (mysqli_num_rows($result) == 1) {
-        $f_name = $data['first_name'];
-        $l_name = $data['last_name'];
+        $fname = $data['fname'];
+        $lname = $data['lname'];
         $email = $data['email'];
-        $date_of_birth = $data['date_of_birth'];
+        $birthdate = $data['birthdate'];
         $picture = $data['picture'];
     }
 }
@@ -77,9 +77,9 @@ mysqli_close($connect);
         <h5>You have selected the data below:</h5>
         <table class="table w-75 mt-3">
             <tr>
-                <td><?php echo "$f_name $l_name" ?></td>
+                <td><?php echo "$fname $lname" ?></td>
                 <td><?php echo $email ?></td>
-                <td><?php echo $date_of_birth ?></td>
+                <td><?php echo $birthdate ?></td>
             </tr>
         </table>
         <h3 class="mb-4">Do you really want to delete this user?</h3>

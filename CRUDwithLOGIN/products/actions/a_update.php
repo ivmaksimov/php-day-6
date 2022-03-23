@@ -31,9 +31,9 @@ if ($_POST) {
     $picture = file_upload($_FILES['picture'], 'product' ); //file_upload() called  
     if ($picture->error === 0) {
         ($_POST["picture"] == "product.png") ?: unlink("../pictures/$_POST[picture], " );
-        $sql = "UPDATE cars SET model = '$model', price = $price, color = '$color', seats = $seats, make = $make, status= '$status', picture = '$picture->fileName'  WHERE id = {$id}";
+        $sql = "UPDATE cars SET model = '$model', price = $price, color = '$color', seats = $seats, make = '$make', status= '$status', picture = '$picture->fileName'  WHERE id = {$id}";
     } else {
-        $sql = "UPDATE cars SET model = '$model', price = $price, color = '$color', seats = $seats, make = $make, status= '$status'  
+        $sql = "UPDATE cars SET model = '$model', price = $price, color = '$color', seats = $seats, make = '$make', status= '$status'  
        WHERE id = {$id}";}
     if (mysqli_query($connect, $sql) === TRUE) {
         $class = "success";

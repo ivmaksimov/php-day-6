@@ -74,6 +74,7 @@ mysqli_close($connect);
                 <img class="userImage" src="./pictures/admavatar.png" alt="Adm avatar">
                 <p class="">Administrator</p>
                 <a class="btn btn-success" href="products/index.php">Products</a>
+                <a class="btn btn-warning" href="booking/booking.php">Booking</a>
                 <a class="btn btn-danger" href="logout.php?logout">Sign Out</a>
             </div>
             <div class="col-8 mt-2">

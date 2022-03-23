@@ -19,8 +19,13 @@ if (mysqli_num_rows($result)  > 0) {
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         $tbody .= "<tr>
             <td><img class='img-thumbnail' src='../pictures/" . $row['picture'] . "'</td>
+            <td>" . $row['id'] . "</td>
             <td>" . $row['model'] . "</td>
             <td>" . $row['price'] . "</td>
+            <td>" . $row['seats'] . "</td>
+            <td>" . $row['color'] . "</td>
+            <td>" . $row['make'] . "</td>
+            <td>" . $row['status'] . "</td>
             <td><a href='update.php?id=" . $row['id'] . "'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a>
             <a href='delete.php?id=" . $row['id'] . "'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a></td>
             </tr>";
@@ -71,9 +76,14 @@ mysqli_close($connect);
         <table class='table table-striped'>
             <thead class='table-success'>
                 <tr>
-                    <th>Picture</th>
+                    <th>ID</th>
                     <th>Name</th>
                     <th>price</th>
+                    <th>Picture</th>
+                    <th>Color</th>
+                    <th>Seats</th>
+                    <th>Make</th>
+                    <th>Make</th>
                     <th>Action</th>
                 </tr>
             </thead>
